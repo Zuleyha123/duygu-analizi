@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duygu Analizi Sistemi</title>
+    <title>Lyric Emotion AI - Analyzer</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #f4f4f9; }
-        iframe { width: 100%; height: 100%; border: none; }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Kaydırma çubuğunu gizle */
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .loading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #ccc, #333, #ccc);
+            z-index: 9999;
+        }
     </style>
 </head>
 <body>
-    <iframe src="https://huggingface.co/spaces/Zuleyha55/sarki-duygu-analizi+" 
-            allow="accelerometer; gyroscope; autoplay; payment; encrypted-media; picture-in-picture" 
-            sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads">
+    <div class="loading-bar"></div>
+    
+    <iframe 
+        src="https://huggingface.co/spaces/KULLANICI_ADIN/SPACE_ADIN?__theme=light" 
+        allow="accelerometer; ambient-light-sensor; input-switch; microphone; camera; gyroscope; paint-order; encrypted-media; picture-in-picture; usb; vr; execution-while-out-of-viewport; execution-while-not-rendered; web-share" 
+        sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"
+        allowfullscreen>
     </iframe>
 </body>
 </html>
